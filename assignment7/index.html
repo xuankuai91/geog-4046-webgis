@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Commuting Survey</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		<nav class="navbar navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<p>Surveys</p>
+				</div>
+
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="https://geog4046.github.io/">GEOG 4046</a></li>
+					</ul>
+				</div><!--/.navbar-collapse -->
+			</div>
+		</nav>
+
+		<div class="container">
+			<h3>Select how likely you are to choose the following modes to workplace:</h3>
+
+			<div class="row">
+				<div class="col-md-4 well">
+					<img class="img-responsive" src="images/bike.png" alt="bike">
+					<div class="form-group row">
+						<div class="col-md-2">
+							<label for="bike">Bike:</label>
+						</div>
+						<div class="col-md-10">
+							<select id="bike" name="rate" class="form-control">
+								<option value="2">Very likely</option>
+								<option value="1">Likely</option>
+								<option value="0">Probably</option>
+								<option value="-1">Unlikely</option>
+								<option value="-2">Very unlikely</option>
+							</select>
+						</div><!--/.col-md-10-->
+					</div><!--/.form-group-->
+            	</div><!--/.col-md-4-->
+
+				<div class="col-md-4 well">
+					<img class="img-responsive" src="images/bus.png" alt="bus">
+					<div class="form-group row">
+						<div class="col-md-2">
+							<label for="bus">Bus:</label>
+						</div>
+						<div class="col-md-10">
+							<select id="bus" name="rate" class="form-control">
+								<option value="2">Very likely</option>
+								<option value="1">Likely</option>
+								<option value="0">Probably</option>
+								<option value="-1">Unlikely</option>
+								<option value="-2">Very unlikely</option>
+							</select>
+						</div><!--/.col-md-10-->
+					</div><!--/.form-group-->
+				</div><!--/.col-md-4-->
+
+				<div class="col-md-4 well">
+					<img class="img-responsive" src="images/car.png" alt="car">
+					<div class="form-group row">
+						<div class="col-md-2">
+							<label for="car">Car:</label>
+						</div>
+						<div class="col-md-10">
+							<select id="car" name="rate" class="form-control">
+								<option value="2">Very likely</option>
+								<option value="1">Likely</option>
+								<option value="0">Probably</option>
+								<option value="-1">Unlikely</option>
+								<option value="-2">Very unlikely</option>
+							</select>
+						</div><!--/.col-md-10-->
+					</div><!--/.form-group-->
+				</div><!--/.col-md-4-->
+			</div><!--/.row-->
+
+			<div class="row">
+				<div class="col-md-4 well">
+					<img class="img-responsive" src="images/carpool.png" alt="carpool">
+					<div class="form-group row">
+						<div class="col-md-2">
+							<label for="carpool">Carpool:</label>
+						</div>
+						<div class="col-md-10">
+							<select id="carpool" name="rate" class="form-control">
+								<option value="2">Very likely</option>
+								<option value="1">Likely</option>
+								<option value="0">Probably</option>
+								<option value="-1">Unlikely</option>
+								<option value="-2">Very unlikely</option>
+							</select>
+						</div><!--/.col-md-10-->
+					</div><!--/.form-group-->
+				</div><!--/.col-md-4-->
+
+				<div class="col-md-4 well">
+					<img class="img-responsive" src="images/taxi.png" alt="taxi">
+					<div class="form-group row">
+						<div class="col-md-2">
+							<label for="taxi">Taxi:</label>
+						</div>
+						<div class="col-md-10">
+							<select id="taxi" name="rate" class="form-control">
+								<option value="2">Very likely</option>
+								<option value="1">Likely</option>
+								<option value="0">Probably</option>
+								<option value="-1">Unlikely</option>
+								<option value="-2">Very unlikely</option>
+							</select>
+						</div><!--/.col-md-10-->
+					</div><!--/.form-group-->
+				</div><!--/.col-md-4-->
+
+				<div class="col-md-4 well">
+					<img class="img-responsive" src="images/walk.png" alt="walk">
+					<div class="form-group row">
+						<div class="col-md-2">
+							<label for="walk">Walk:</label>
+						</div>
+						<div class="col-md-10">
+							<select id="walk" name="rate" class="form-control">
+								<option value="2">Very likely</option>
+								<option value="1">Likely</option>
+								<option value="0">Probably</option>
+								<option value="-1">Unlikely</option>
+								<option value="-2">Very unlikely</option>
+							</select>
+						</div><!--/.col-md-10-->
+					</div><!--/.form-group-->
+				</div><!--/.col-md-4-->
+			</div><!--/.row-->
+		</div><!--/.container-->
+
+		<div class="container">
+			<div class="form-group row">
+				<div class="col-md-1">
+					<label for="zip">Your ZIP:</label>
+				</div>
+				<div class="col-md-10">
+					<input type="text" class="form-control" id="zip" placeholder="70000">
+				</div>
+				<div class="col-md-1">
+					<button id="submit" type="submit" class="btn btn-success">Submit</button>
+				</div>
+			</div><!--/.form-group-->
+
+			<div class="row" id="output-area">
+				<div class="col-md-2" id="bike-rate"></div>
+				<div class="col-md-2" id="bus-rate"></div>
+				<div class="col-md-2" id="car-rate"></div>
+				<div class="col-md-2" id="carpool-rate"></div>
+				<div class="col-md-2" id="taxi-rate"></div>
+				<div class="col-md-2" id="walk-rate"></div>
+			</div><!--/.row-->
+		</div><!--/.container-->
+
+		<div class="container">
+			<hr>
+			<footer>
+				<p>&copy; <span id="copy-date"></span> GEOG 4046</p>
+			</footer>
+		</div><!--/.container-->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
