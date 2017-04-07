@@ -32,6 +32,8 @@ function main() {
 		var taxi = $("#taxi").val()
 		var walk = $("#walk").val()
 
+		var zip = $("#zip").val()
+
 		// Insert text into the output area element
 		var bikeRate = switchText(bike)
 		var busRate = switchText(bus)
@@ -40,12 +42,12 @@ function main() {
 		var taxiRate = switchText(taxi)
 		var walkRate = switchText(walk)
 		
-		$("#bike-rate").text("Bike: " + bikeRate + ".")
-		$("#bus-rate").text("Bus: " + busRate + ".")
-		$("#car-rate").text("Car: " + carRate + ".")
-		$("#carpool-rate").text("Carpool: " + carpoolRate + ".")
-		$("#taxi-rate").text("Taxi: " + taxiRate + ".")
-		$("#walk-rate").text("Walk: " + walkRate + ".")
+		$("#bike-rate").text("Bike from " + zip + ": " + bikeRate + ".")
+		$("#bus-rate").text("Bus from " + zip + ": " + busRate + ".")
+		$("#car-rate").text("Car from " + zip + ": " + carRate + ".")
+		$("#carpool-rate").text("Carpool from " + zip + ": " + carpoolRate + ".")
+		$("#taxi-rate").text("Taxi from " + zip + ": " + taxiRate + ".")
+		$("#walk-rate").text("Walk from " + zip + ": " + walkRate + ".")
 	}) // click()
 
 	// Create a variable for the current year and insert it into the page
