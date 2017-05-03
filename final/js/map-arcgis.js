@@ -17,7 +17,7 @@ function main() {
       function create_3dView() {
         var scene = new WebScene({
           portalItem: {
-            id: "5aaa18c88ef54988a0ad732a38bf12cb"
+            id: "159d275b250b4db1978a728bd20fa2ec"
           }
         });
 
